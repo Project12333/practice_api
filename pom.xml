@@ -30,18 +30,20 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-   					 <cloudHubDeployment>
-      					<uri>https://anypoint.mulesoft.com</uri>
-     				    <muleVersion>4.4.0</muleVersion>
-      					<username>9980</username>
-      					<password>Sindhu@123</password>
-      					<applicationName>hello-world-cicd-04032025</applicationName>
-     					<environment>Sandbox</environment>
-     					<workers>1</workers>
-     					<workerType>MICRO</workerType>
-	  					<objectStoreV2>true</objectStoreV2>
-    				</cloudHubDeployment>
-  				</configuration>
+    <cloudHub2Deployment>
+        <uri>https://anypoint.mulesoft.com</uri>
+        <applicationName>hello-world-cicd-04032025</applicationName>
+        <environment>Sandbox</environment>
+        <target>CloudHub-2.0</target>
+        <workers>1</workers>
+        <workerType>MICRO</workerType>
+        <replicas>1</replicas>
+        <runtimeVersion>4.4.0</runtimeVersion>
+        <persistentQueues>true</persistentQueues>
+        <objectStoreV2>true</objectStoreV2>
+    </cloudHub2Deployment>
+</configuration>
+
 			</plugin>
 		</plugins>
 	</build>
